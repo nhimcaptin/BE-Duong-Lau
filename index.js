@@ -9,8 +9,8 @@ dotenv.config();
 app.use(cors());
 app.use(express.json());
 
-app.use("/api/auth", authRoute);
-app.use("/api/peoples", peopleRoute);
+// app.use("/api/auth", authRoute);
+// app.use("/api/peoples", peopleRoute);
 
 app.use("/api/transaction", (req, res) => {
   console.log(req.body);
