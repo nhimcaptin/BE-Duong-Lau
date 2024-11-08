@@ -12,6 +12,11 @@ app.use(express.json());
 app.use("/api/auth", authRoute);
 app.use("/api/peoples", peopleRoute);
 
+app.use("/api/transaction", (req, res) => {
+  console.log(req.body);
+  return res.status(200).json(req.body);
+});
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log("Connected to backend", +port);
